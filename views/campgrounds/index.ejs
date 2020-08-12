@@ -1,0 +1,51 @@
+<%- include("../partials/header") %>
+
+	<!-- <% if(currentUser && currentUser.isAdmin){ %>
+			You r an admin!!
+	<% } %> -->
+<!-- <div class = "container"> -->
+	<div class="container search-outer">
+		<form action ="/campground" class="form-inline" method = "GET">
+		  <div class="form-group">
+			<input type="text" name = "search" style="width: 50rem;" class="form-control search-form" placeholder="Search">
+		  </div>
+		  <button type="submit" class="btn btn-default search-button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+		</form>
+	</div>
+	<div class ="jumbotron container">
+		<h1>
+			Camping Ground Page
+		</h1>
+		<p>
+			A camp Grounding website
+		</p>
+		<p >
+			<a class = "btn btn-success btn-lg" href ="/campground/new">Add new Camp Ground</a>
+		</p>
+	</div>
+
+	<% if(noMatch != null){ %>
+	<div>
+		<%= noMatch %>
+	</div>
+	<% } %>
+	
+	<div class="row" style="display: flex; flex-wrap: wrap">
+		<% for(var i = 0;i<camp.length;++i){%>
+		<div class ="col-md-4 col-sm-6">
+			<div class="thumbnail">
+				<img src ="<%=camp[i].url%>" height = "100px">
+				<h4 class = "caption text-center">
+					<%=camp[i].name%>
+				</h4>
+				<p class = "text-center">
+						<a href ="/campground/<%= camp[i]._id%>" class="btn btn-primary">More info</a>
+				</p>
+			</div>
+			
+		</div>
+		<%}%>
+	</div>
+<!-- </div> -->
+	
+<%- include("../partials/footer") %>

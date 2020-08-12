@@ -1,0 +1,36 @@
+.thumbnail img{
+	width:100%;
+}
+
+.thumbnail{
+	padding: 0;
+}
+
+.display-inline{
+	display: inline;
+}
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.search-outer{
+	display: block;
+	height: 50px;
+	width: max-content;
+	margin-bottom: 20px;
+}
+.search-form{
+	width: 50rem;
+	border-radius: 50px;
+	height: -webkit-fill-available;
+	/* border-right: none; */
+}	
+.search-button{
+	/* border-bottom-right-radius: 50px;
+	border-top-right-radius: 50px; */
+	border-radius: 20%;
+	height: -webkit-fill-available;
+	/* border-left: none; */
+}
